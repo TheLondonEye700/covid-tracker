@@ -12,8 +12,6 @@ const Charts = ({data:{confirmed, recovered, deaths}, country}) => {
             setDailyData(await fetchDailyData());
         }
 
-        console.log(dailyData);
-
         fetchChartAPI();
     }, []);
 
@@ -42,7 +40,7 @@ const Charts = ({data:{confirmed, recovered, deaths}, country}) => {
             {
                 labels:['Infected','Recovered','Deaths'],
                 datasets:[{
-                    // label: 'People',
+                    label: 'People',
                     data:[confirmed.value, recovered.value, deaths.value],
                     backgroundColor: ['rgba(0, 0, 225, 0.5)','rgba(0, 255, 0, 0.5)', 'rgba(255, 0, 0, 0.5)',],
                 }]
