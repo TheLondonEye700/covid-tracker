@@ -10,8 +10,7 @@ const App = () => {
 
     useEffect(() => {
         async function getData() {
-            const fetchedData = await fetchData();
-            setData(fetchedData)
+            setData(await fetchData())
         }
         getData();
     }, []);
@@ -22,12 +21,17 @@ const App = () => {
         setCurrentCountry(country)
     }
 
-    return ( 
-		<div className = { styles.container } >
-        <Cards data = { data }/> 
-		<CountryPicker handleCountryChange = { handleCountryChange }/> 
-		<Chart data = { data } country = { currentCountry }/> 
-		</div>
+    return ( <
+        div className = { styles.container } >
+        <
+        Cards data = { data }
+        />  <
+        CountryPicker handleCountryChange = { handleCountryChange }
+        />  <
+        Chart data = { data }
+        country = { currentCountry }
+        />  <
+        /div>
     )
 }
 
