@@ -10,8 +10,7 @@ export const fetchData = async(country) => {
         return { confirmed, recovered, deaths, lastUpdate };
 
     } catch (err) {
-        alert("Cannot load Data");
-        console.log(err)
+        alert("Cannot load Data")
     }
 }
 
@@ -26,8 +25,7 @@ export const fetchDailyData = async() => {
         return needData;
 
     } catch (err) {
-        alert("Cannot load Data");
-        console.log(err)
+        alert("Cannot load Data")
     }
 }
 
@@ -37,7 +35,6 @@ export const fetchCountries = async() => {
         return countries.map((country) => country.name)
 
     } catch (error) {
-        alert("Cannot load Country Data");
-        console.log(error);
+        alert("Cannot load Country Data")
     }
 }

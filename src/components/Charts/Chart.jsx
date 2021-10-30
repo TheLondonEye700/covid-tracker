@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import {fetchDailyData} from '../../api'
-import {Line, Bar} from 'react-chartjs-2';
+import {Line, Bar} from 'react-chartjs-2'
 
+import {fetchDailyData} from '../../api'
 import styles from './Chart.module.css'
 
 const Charts = ({data:{confirmed, recovered, deaths}, country}) => {
@@ -51,12 +51,10 @@ const Charts = ({data:{confirmed, recovered, deaths}, country}) => {
                     legend:{display:false},
                     title:{display: true, text:`Current state in ${country}`}
                 }
-            }/>
-        )
-        :null
+            }/>)
+        : null
     )
     
-
     return(
         <div className={styles.container}>
             {country ? barChart: lineChart}
